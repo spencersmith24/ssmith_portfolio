@@ -1,3 +1,8 @@
+# spencersmith24.github.io
+
+This is the repository for my personal portfolio!
+
+
 
 TITLE: 
 Nitro - Fully Responsive Free HTML5 template

@@ -1,6 +1,6 @@
 # spencersmith24.github.io
 
-This is the repository for my personal portfolio!
+This is the repository for my personal portfolio! All credit for the template can be found below.
 
 
 

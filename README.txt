@@ -1,6 +1,6 @@
 # spencersmith24.github.io
 
-This is the repository for my personal portfolio! All credit for the template can be found below.
+This is the repository for my personal portfolio! All credit for the template can be found below. This portfolio is optimized for use on a computer, not a phone. Phone support will be added in the future.
 
 
 

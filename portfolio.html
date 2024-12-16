@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 
 <head>
 	<meta charset="utf-8">
@@ -12,54 +8,87 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Portfolio page for Spencer Smith's portfolio." />
 
-
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- Place favicon.ico in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
-
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic,700' rel='stylesheet'
 		type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
+	<!-- Theme style -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<style>
+		/* Ensure all content aligns flexibly */
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -15px;
+			/* Ensure proper spacing within the grid */
+		}
+
+		.work-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 2rem;
+			padding: 15px;
+			text-align: center;
+			flex: 0 1 calc(33.333% - 30px);
+			/* 3-column layout */
+			box-sizing: border-box;
+			max-width: calc(33.333% - 30px);
+			/* Prevent oversizing */
+		}
+
+		.work-item img {
+			width: 100%;
+			max-width: 100%;
+			/* Avoid overflow */
+			height: auto;
+			/* Maintain aspect ratio */
+			margin-bottom: 1rem;
+			border-radius: 8px;
+			/* Optional styling for images */
+		}
+
+		/* Adjust for smaller screens */
+		@media (max-width: 991px) {
+			.work-item {
+				flex: 0 1 calc(50% - 30px);
+				/* 2-column layout */
+				max-width: calc(50% - 30px);
+			}
+		}
+
+		@media (max-width: 575px) {
+			.work-item {
+				flex: 0 1 100%;
+				/* Single-column layout */
+				max-width: 100%;
+			}
+		}
+
+		.clearfix {
+			display: none;
+			/* Clearfix is unnecessary with flexbox */
+		}
+	</style>
 
 </head>
 
 <body>
 
 	<div id="fh5co-page">
-		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
-
-			<h1 id="ssmith-photo"><a href="index.html"><img src="images/ssmith.jpg" width="90%"
-						alt="Spencer Smith Photo"></a>
+			<h1 id="ssmith-photo">
+				<a href="index.html">
+					<img src="images/ssmith.jpg" width="90%" alt="Spencer Smith Photo">
+				</a>
 			</h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
@@ -69,111 +98,81 @@
 					<li><a href="resume.html">Resume</a></li>
 				</ul>
 			</nav>
-
-			<div class="fh5co-footer">
-				<ul>
-					<li><a href="https://github.com/spencersmith24" target="_blank"><i class="icon-github"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/spencersmith24/" target="_blank"><i
-								class="icon-linkedin"></i></a></li>
-				</ul>
-			</div>
-
 		</aside>
 
 		<div id="fh5co-main">
-
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Portfolio<p
-						style="font-size: 1rem; font-variant: small-caps;">if the formatting is weird, zoom
-						in/out</p></span></h2>
-				<div class="row animate-box" data-animate-effect="fadeInLeft">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">
+					Portfolio
+					<p style="font-size: 1rem; font-variant: small-caps;">if the formatting is weird, zoom in/out</p>
+				</h2>
 
-					<!-- Room Animation -->
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+				<div class="row animate-box" data-animate-effect="fadeInLeft">
+					<!-- Portfolio Items -->
+					<div class="work-item">
 						<a href="room-animation.html">
-							<img src="roomAnimation/spener_smoht_room_shot_02_1.png" alt="Image of 3D rendered room."
-								class="img-responsive">
+							<img src="roomAnimation/spener_smoht_room_shot_02_1.png" alt="Image of 3D rendered room.">
 							<h3 class="fh5co-work-title">ART210 Room Animation</h3>
 							<p>3D Modeling, Animating</p>
 						</a>
 					</div>
 
-					<!-- CS222 Project -->
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+					<div class="work-item">
 						<a href="222-project.html">
-							<img src="222-files/home-page.png" alt="game_data front page." class="img-responsive">
+							<img src="222-files/home-page.png" alt="game_data front page.">
 							<h3 class="fh5co-work-title">game_data Project</h3>
 							<p>Dart, Flutter, TDD</p>
 						</a>
 					</div>
 
-					<!-- PvZ Board Game -->
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+					<div class="work-item">
 						<a href="pvz-game.html">
-							<img src="pvz-files/pvz-board.png" alt="PvZ game board" class="img-responsive">
+							<img src="pvz-files/pvz-board.png" alt="PvZ game board">
 							<h3 class="fh5co-work-title">Plants vs. Zombies: The Board Game</h3>
 							<p>Game Design, Art</p>
 						</a>
 					</div>
 
-					<!-- Other 3D projects -->
-					<div class="clearfix visible-md-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+					<div class="work-item">
 						<a href="misc-3d.html">
-							<img src="misc3D/maya-logo.jpg" alt="Maya logo" class="img-responsive">
+							<img src="misc3D/maya-logo.jpg" alt="Maya logo">
 							<h3 class="fh5co-work-title">Misc. 3D Art</h3>
 							<p>3D Modeling, Texturing, Animating</p>
 						</a>
 					</div>
 
-					<!-- National Anthem Video -->
-					<div class="clearfix visible-md-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+					<div class="work-item">
 						<a href="anthem-vid.html">
-							<img src="anthem-files/irish guy.jpg" alt="Irish Patriot" class="img-responsive">
+							<img src="anthem-files/irish guy.jpg" alt="Irish Patriot">
 							<h3 class="fh5co-work-title">National Anthems: Patriotism and Nationalism</h3>
 							<p>Video Editing, Audio Mixing</p>
 						</a>
 					</div>
 
-					<!-- CS315 Project 1: Angry Birds -->
-					<div class="clearfix visible-md-block"></div>
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
+					<div class="work-item">
 						<a href="angry-birds.html">
-							<img src="mad-flyers-files/mad-flyers-menu.jpg" alt="An upset bird." class="img-responsive">
+							<img src="mad-flyers-files/mad-flyers-menu.jpg" alt="An upset bird.">
 							<h3 class="fh5co-work-title">Angry Birds "remake"</h3>
 							<p>Game Design and Development, GDScript</p>
 						</a>
 					</div>
-					<div class="clearfix visible-md-block"></div>
 
+					<div class="work-item">
+						<a href="pumpkin-rescue.html">
+							<img src="pumpkin-files/pumpkin-title-ss.png"
+								alt="Title screen for The Great Pumpkin Rescue">
+							<h3 class="fh5co-work-title">The Great Pumpkin Rescue</h3>
+							<p>Game Design and Development, GDScript</p>
+						</a>
+					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 
-	<!-- jQuery -->
+	<!-- Scripts -->
 	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-
-
-
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
-
 </body>
 
 </html>
